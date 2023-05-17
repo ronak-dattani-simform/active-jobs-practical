@@ -1,0 +1,11 @@
+create_random_event:
+  cron: "0 * * * *"
+  class: "CreateRandomEventJob"
+
+send_event_reminder: 
+  cron: "0 0 * * *"
+  class: "SendEventReminderJob"
+
+send_list:
+  cron: "* * * * *"
+  class: "SendListJob"

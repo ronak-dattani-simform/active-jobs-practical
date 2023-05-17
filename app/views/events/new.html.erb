@@ -1,0 +1,30 @@
+<div class="container">
+    <%=  form_with(url: events_path, model: @event, method: :post ) do |form| %>
+
+    <div class="row">  
+      <div class="col-4">
+        <%= form.label :title %>
+        <%= form.text_field :title, class: "form-control" %>
+        </div>
+    </div>
+    <br>
+    
+    <div class="row">  
+      <div class="col-4">
+        <%= form.label :event_time %>
+        <%= form.datetime_field :event_time,  class: "form-control" %>
+    </div>
+    </div>
+    <br>
+    <div class="row">  
+      <div class="col-4">
+        <%= form.label :description %>
+        <%= form.text_field :description,  class: "form-control" %>
+    </div>
+    </div>
+    
+    
+    <%= form.submit class: "btn btn-primary " %>
+    <% end %>
+
+</div>
